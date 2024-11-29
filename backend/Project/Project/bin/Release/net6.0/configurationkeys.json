@@ -1,0 +1,20 @@
+{
+  "FacilityManagementHostUrl": "http://pc.quantrithietbi.com",
+  "DoorControlBaseApi": "http://iot.hcmue.space:8080/v1",
+  "GetewaysEndPoint": "gateways",
+  "GetewayEndPoint": "gateway",
+  "DoorlockEndPoint": "doorlock",
+  "DoorlocksEndPoint": "doorlocks",
+  "EmployeesEndPoint": "employees",
+  "EmployeeEndPoint": "employee",
+  "StudentsEndPoint": "students",
+  "StudentEndPoint": "student",
+  "SchedulersEndPoint": "schedulers",
+  "SchedulerEndPoint": "scheduler",
+  "CreateSchedulerEndPoint": "scheduler/excel",
+  "UpdateDoorlockStateEndPoint": "doorlock/cmd",
+  "DoorlockStateLock": "lock",
+  "DoorlockStateUnlock": "unlock",
+  "DoorlockStateDuration": "5",
+  "CustomersEndPoint": "customers"
+}
