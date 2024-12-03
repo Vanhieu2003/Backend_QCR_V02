@@ -26,11 +26,9 @@ namespace Project.Controllers
 
         // GET: api/CleaningForms
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<object>>> GetCleaningForms(
-            [FromQuery] int pageNumber = 1,
-            [FromQuery] int pageSize = 10)
+        public async Task<ActionResult<IEnumerable<object>>> GetCleaningForms()
         {
-            var result = await (from cf in _context.CleaningForms
+            var results = await (from cf in _context.CleaningForms
                                 join r in _context.Rooms on cf.RoomId equals r.Id
                                 join f in _context.Floors on r.FloorId equals f.Id
                                 join b in _context.Blocks on r.BlockId equals b.Id
@@ -45,13 +43,12 @@ namespace Project.Controllers
                                     FloorName = f.FloorName,
                                     RoomName = r.RoomName
                                 })
-                        .Skip((pageNumber - 1) * pageSize)
-                        .Take(pageSize)
+                        
                         .ToListAsync();
 
-            var totalValue = await _context.CleaningForms.CountAsync();
-            var response = new { result, totalValue };
-            return Ok(response);
+            
+            
+            return Ok(results);
         }
 
         // GET: api/CleaningForms?id={id}

@@ -582,8 +582,8 @@ D:\Project\FMedu-DGCL\backend\Project\Project\bin\Release\net6.0\Microsoft.Ident
 D:\FM-Backend-V02\backend\Project\Project\bin\Release\net6.0\appsettings.Development.json
 D:\FM-Backend-V02\backend\Project\Project\bin\Release\net6.0\appsettings.json
 D:\FM-Backend-V02\backend\Project\Project\bin\Release\net6.0\configurationkeys.json
-D:\FM-Backend-V02\backend\Project\Project\bin\Release\net6.0\Project.staticwebassets.endpoints.json
 D:\FM-Backend-V02\backend\Project\Project\bin\Release\net6.0\Project.staticwebassets.runtime.json
+D:\FM-Backend-V02\backend\Project\Project\bin\Release\net6.0\Project.staticwebassets.endpoints.json
 D:\FM-Backend-V02\backend\Project\Project\bin\Release\net6.0\Project.exe
 D:\FM-Backend-V02\backend\Project\Project\bin\Release\net6.0\Project.deps.json
 D:\FM-Backend-V02\backend\Project\Project\bin\Release\net6.0\Project.runtimeconfig.json

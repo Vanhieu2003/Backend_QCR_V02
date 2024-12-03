@@ -257,18 +257,7 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "pageNumber",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "pageSize",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.IEnumerable\u00601[[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
@@ -476,6 +465,22 @@
   },
   {
     "ContainingType": "Project.Controllers.CleaningReportsController",
+    "Method": "GetCleaningReportByManageUserId",
+    "RelativePath": "api/CleaningReports/GetAllInfoByManageUserId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Project.Controllers.CleaningReportsController",
     "Method": "GetCleaningReportByUserId",
     "RelativePath": "api/CleaningReports/GetAllInfoByUserId",
     "HttpMethod": "GET",
@@ -598,37 +603,6 @@
   },
   {
     "ContainingType": "Project.Controllers.CriteriaController",
-    "Method": "GetCriteria",
-    "RelativePath": "api/Criteria",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "pageNumber",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "pageSize",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Project.Entities.Criteria, Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "Project.Controllers.CriteriaController",
     "Method": "DisableCriteria",
     "RelativePath": "api/Criteria",
     "HttpMethod": "PUT",
@@ -693,7 +667,7 @@
   },
   {
     "ContainingType": "Project.Controllers.CriteriaController",
-    "Method": "GetAllCriteria",
+    "Method": "GetCriteria",
     "RelativePath": "api/Criteria/GetAll",
     "HttpMethod": "GET",
     "IsController": true,
@@ -701,7 +675,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "Project.Entities.Criteria",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Project.Entities.Criteria, Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
