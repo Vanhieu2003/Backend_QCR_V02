@@ -73,11 +73,11 @@ namespace Project.Controllers
         }
 
 
-        [HttpGet("GetAllInfoByManageUserId")]
-        public async Task<IActionResult> GetCleaningReportByManageUserId(string userId)
+        [HttpGet("GetAllInfoByManagerId")]
+        public async Task<IActionResult> GetCleaningReportByManagerId(string managerId)
         {
 
-            var result = await _repo.GetReportInfoByManageUserId(userId);
+            var result = await _repo.GetReportInfoByManagerId(managerId);
 
             return Ok(result);
         }

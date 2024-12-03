@@ -52,7 +52,7 @@ namespace Project.Repository
                 Users = new List<UserDto>()
             };
 
-            // Duyệt qua dữ liệu và thêm người dùng vào danh sách nếu có
+           
             foreach (var data in responsibleGroupData)
             {
                 if (data.User != null)

@@ -465,14 +465,14 @@
   },
   {
     "ContainingType": "Project.Controllers.CleaningReportsController",
-    "Method": "GetCleaningReportByManageUserId",
-    "RelativePath": "api/CleaningReports/GetAllInfoByManageUserId",
+    "Method": "GetCleaningReportByManageId",
+    "RelativePath": "api/CleaningReports/GetAllInfoByManageId",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "userId",
+        "Name": "manageId",
         "Type": "System.String",
         "IsRequired": false
       }

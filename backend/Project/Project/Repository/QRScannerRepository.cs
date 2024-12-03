@@ -21,13 +21,13 @@ namespace Project.Repository
                 throw new ArgumentException("Chưa có form đánh giá cho phòng này");
             }
 
-            // Lấy BlockId và CampusId từ Block liên quan đến Room
+            
             var block = _context.Blocks.FirstOrDefault(b => b.Id == room.BlockId);
 
-            // Xác định thời gian hiện tại
+        
             var currentTime = DateTime.Now.TimeOfDay;
 
-            // Lấy ShiftId hợp lệ theo thời gian và roomCategoryId
+            
             var shift = _context.Shifts
                 .Where(s => s.RoomCategoryId == room.RoomCategoryId
                             && s.StartTime <= currentTime
@@ -35,7 +35,7 @@ namespace Project.Repository
                             && s.Status == "ENABLE")
                 .FirstOrDefault();
 
-            // Tạo response
+           
             var response = new QRDto
             {
                 CampusId = block.CampusId,

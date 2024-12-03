@@ -126,7 +126,7 @@ namespace Project.Repository
         }
 
 
-        public async Task<List<CleaningReportDetailsDto>> GetReportInfoByManageUserId(string userId)
+        public async Task<List<CleaningReportDetailsDto>> GetReportInfoByManagerId(string managerId)
         {
 
             var reportDetailsQuery = from cr in _context.CleaningReports
@@ -136,7 +136,7 @@ namespace Project.Repository
                                      join b in _context.Blocks on r.BlockId equals b.Id
                                      join c in _context.Campuses on b.CampusId equals c.Id
                                      join f in _context.Floors on r.FloorId equals f.Id
-                                     where cr.UserId == userId
+                                     where cr.UserId == managerId
                                      select new CleaningReportDetailsDto
                                      {
                                          id = cr.Id,

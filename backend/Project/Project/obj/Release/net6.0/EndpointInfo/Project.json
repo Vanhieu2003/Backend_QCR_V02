@@ -746,14 +746,14 @@
         }
       }
     },
-    "/api/CleaningReports/GetAllInfoByManageUserId": {
+    "/api/CleaningReports/GetAllInfoByManageId": {
       "get": {
         "tags": [
           "CleaningReports"
         ],
         "parameters": [
           {
-            "name": "userId",
+            "name": "manageId",
             "in": "query",
             "schema": {
               "type": "string"
@@ -5944,6 +5944,10 @@
         "type": "object",
         "properties": {
           "reportId": {
+            "type": "string",
+            "nullable": true
+          },
+          "userId": {
             "type": "string",
             "nullable": true
           },

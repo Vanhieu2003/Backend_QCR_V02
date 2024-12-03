@@ -28,7 +28,7 @@ namespace Project.Repository
                                         && cr.FormId == criteriaReport.FormId);
         }
 
-        // Thêm mới CriteriaReport
+        
         public async Task AddCriteriaReportAsync(CriteriaReport criteriaReport)
         {
             criteriaReport.CreateAt = GetCurrentTimeInGmtPlus7();
