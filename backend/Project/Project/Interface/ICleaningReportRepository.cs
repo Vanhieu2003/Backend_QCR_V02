@@ -18,5 +18,7 @@ namespace Project.Interface
 
         public Task<CleaningReport> UpdateCriteriaAndCleaningReport(UpdateCleaningReportRequest request);
 
+        public  Task<List<CleaningReportDetailsDto>> GetReportInfoByUserId(string userId);
+
     }
 }

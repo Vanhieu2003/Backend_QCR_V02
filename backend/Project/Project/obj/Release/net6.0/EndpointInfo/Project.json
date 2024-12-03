@@ -745,6 +745,27 @@
         }
       }
     },
+    "/api/CleaningReports/GetAllInfoByUserId": {
+      "get": {
+        "tags": [
+          "CleaningReports"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/CleaningReports/GetReportInfo": {
       "get": {
         "tags": [

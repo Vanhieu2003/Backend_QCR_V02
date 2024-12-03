@@ -63,6 +63,15 @@ namespace Project.Controllers
             return Ok(result);
         }
 
+        [HttpGet("GetAllInfoByUserId")]
+        public async Task<IActionResult> GetCleaningReportByUserId(string userId)
+        {
+
+            var result = await _repo.GetReportInfoByUserId(userId);
+
+            return Ok(result);
+        }
+
 
         [HttpGet("GetReportInfo")]
         public async Task<IActionResult> GetReportInfoByReportId([FromQuery] string reportId)
@@ -80,6 +89,8 @@ namespace Project.Controllers
                 return Ok(result);
            
         }
+
+
 
         [HttpPut("update")]
         public async Task<IActionResult> UpdateCriteriaAndCleaningReport([FromBody] UpdateCleaningReportRequest request)

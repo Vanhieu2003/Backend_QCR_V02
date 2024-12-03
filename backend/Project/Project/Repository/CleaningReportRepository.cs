@@ -85,7 +85,44 @@ namespace Project.Repository
           
             var reports = await reportDetailsQuery.ToListAsync();
 
-            return (reports);
+            return reports;
+        }
+
+        public async Task<List<CleaningReportDetailsDto>> GetReportInfoByUserId(string userId)
+        {
+            
+            var reportDetailsQuery = from cr in _context.CleaningReports
+                                     join s in _context.Shifts on cr.ShiftId equals s.Id
+                                     join cf in _context.CleaningForms on cr.FormId equals cf.Id
+                                     join r in _context.Rooms on cf.RoomId equals r.Id
+                                     join b in _context.Blocks on r.BlockId equals b.Id
+                                     join c in _context.Campuses on b.CampusId equals c.Id
+                                     join f in _context.Floors on r.FloorId equals f.Id
+                                     join us in _context.UserScores on cr.Id equals us.ReportId
+                                     where us.UserId == userId
+                                     select new CleaningReportDetailsDto
+                                     {
+                                         id = cr.Id,
+                                         formId = cr.FormId,
+                                         campusName = c.CampusName,
+                                         blockName = b.BlockName,
+                                         floorName = f.FloorName,
+                                         roomName = r.RoomName,
+                                         value = cr.Value,
+                                         userId = cr.UserId,
+                                         startTime = s.StartTime.ToString("hh\\:mm"),
+                                         endTime = s.EndTime.ToString("hh\\:mm"),
+                                         createAt = cr.CreateAt,
+                                         updateAt = cr.UpdateAt
+                                     };
+
+            // Sắp xếp báo cáo theo thời gian tạo mới nhất
+            reportDetailsQuery = reportDetailsQuery.OrderByDescending(r => r.createAt);
+
+
+            var reports = await reportDetailsQuery.ToListAsync();
+
+            return reports;
         }
 
         public async Task<CleaningReport> UpdateCriteriaAndCleaningReport(UpdateCleaningReportRequest request)

@@ -476,6 +476,22 @@
   },
   {
     "ContainingType": "Project.Controllers.CleaningReportsController",
+    "Method": "GetCleaningReportByUserId",
+    "RelativePath": "api/CleaningReports/GetAllInfoByUserId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Project.Controllers.CleaningReportsController",
     "Method": "GetCleaningReportByCleaningForm",
     "RelativePath": "api/CleaningReports/GetByCleaningForm",
     "HttpMethod": "GET",

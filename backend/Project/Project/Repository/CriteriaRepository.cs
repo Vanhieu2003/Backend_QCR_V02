@@ -75,14 +75,13 @@ namespace Project.Repository
             return newCriteria;
         }
 
-        public async Task<List<Criteria>> GetAllCriteria(int pageNumber = 1, int pageSize = 10)
+        public async Task<List<Criteria>> GetAllCriteria()
         {
             var query = _context.Criteria.Where(c => c.Status == "ENABLE").AsQueryable();
 
             query = query.OrderByDescending(r => r.RoomCategoryId);
 
-            var criteriaDetail = await query
-               .Skip((pageNumber - 1) * pageSize).Take(pageSize).ToListAsync();
+            var criteriaDetail = await query.ToListAsync();
 
             return criteriaDetail;
         }

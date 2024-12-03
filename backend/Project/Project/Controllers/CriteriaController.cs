@@ -26,49 +26,14 @@ namespace Project.Controllers
             _repo = repo;
         }
 
-        // GET: api/Criteria
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Criteria>>> GetCriteria([FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10)
-        {
-
-
-            if (pageNumber < 1)
-            {
-                return BadRequest("Số trang không hợp lệ.");
-            }
-
-            if (pageSize <= 0)
-            {
-                return BadRequest("Kích thước trang không hợp lệ.");
-            }
-
-            var criterias = await _repo.GetAllCriteria(pageNumber, pageSize);
-            var totalValue = await _context.Criteria.CountAsync(c => c.Status == "ENABLE");
-
-            if (criterias == null || !criterias.Any())
-            {
-                return NotFound("Không tìm thấy tiêu chí.");
-            }
-            var response = new { criterias, totalValue };
-            return Ok(response);
-        }
+     
         [HttpGet("GetAll")]
-        public async Task<ActionResult<Criteria>> GetAllCriteria()
+        public async Task<ActionResult<IEnumerable<Criteria>>> GetCriteria()
         {
-            if (_context.Criteria == null)
-            {
-                return NotFound();
-            }
-            var criteria = await _context.Criteria.Where(c => c.Status == "ENABLE").ToListAsync();
-
-            if (criteria == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(criteria);
+            var criterias = await _repo.GetAllCriteria();
+       
+            return Ok(criterias);
         }
-
       
 
         [HttpGet("ByRoom")]

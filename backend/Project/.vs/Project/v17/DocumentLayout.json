@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "D:\\FM-Backend-V02\\backend\\Project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D8A39880-28D6-4964-ACFC-A5ABCA916EAA}|Project\\Project.csproj|d:\\fm-backend-v02\\backend\\project\\project\\controllers\\criteriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8A39880-28D6-4964-ACFC-A5ABCA916EAA}|Project\\Project.csproj|solutionrelative:project\\controllers\\criteriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8A39880-28D6-4964-ACFC-A5ABCA916EAA}|Project\\Project.csproj|d:\\fm-backend-v02\\backend\\project\\project\\interface\\icriteriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8A39880-28D6-4964-ACFC-A5ABCA916EAA}|Project\\Project.csproj|solutionrelative:project\\interface\\icriteriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8A39880-28D6-4964-ACFC-A5ABCA916EAA}|Project\\Project.csproj|d:\\fm-backend-v02\\backend\\project\\project\\repository\\criteriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8A39880-28D6-4964-ACFC-A5ABCA916EAA}|Project\\Project.csproj|solutionrelative:project\\repository\\criteriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8A39880-28D6-4964-ACFC-A5ABCA916EAA}|Project\\Project.csproj|d:\\fm-backend-v02\\backend\\project\\project\\repository\\cleaningreportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8A39880-28D6-4964-ACFC-A5ABCA916EAA}|Project\\Project.csproj|solutionrelative:project\\repository\\cleaningreportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8A39880-28D6-4964-ACFC-A5ABCA916EAA}|Project\\Project.csproj|d:\\fm-backend-v02\\backend\\project\\project\\interface\\icleaningreportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8A39880-28D6-4964-ACFC-A5ABCA916EAA}|Project\\Project.csproj|solutionrelative:project\\interface\\icleaningreportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8A39880-28D6-4964-ACFC-A5ABCA916EAA}|Project\\Project.csproj|d:\\fm-backend-v02\\backend\\project\\project\\controllers\\cleaningreportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8A39880-28D6-4964-ACFC-A5ABCA916EAA}|Project\\Project.csproj|solutionrelative:project\\controllers\\cleaningreportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D8A39880-28D6-4964-ACFC-A5ABCA916EAA}|Project\\Project.csproj|d:\\fm-backend-v02\\backend\\project\\project\\repository\\schedulerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8A39880-28D6-4964-ACFC-A5ABCA916EAA}|Project\\Project.csproj|solutionrelative:project\\repository\\schedulerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,18 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D8A39880-28D6-4964-ACFC-A5ABCA916EAA}|Project\\Project.csproj|d:\\fm-backend-v02\\backend\\project\\project\\interface\\ischedulerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8A39880-28D6-4964-ACFC-A5ABCA916EAA}|Project\\Project.csproj|solutionrelative:project\\interface\\ischedulerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8A39880-28D6-4964-ACFC-A5ABCA916EAA}|Project\\Project.csproj|d:\\fm-backend-v02\\backend\\project\\project\\interface\\icleaningreportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8A39880-28D6-4964-ACFC-A5ABCA916EAA}|Project\\Project.csproj|solutionrelative:project\\interface\\icleaningreportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8A39880-28D6-4964-ACFC-A5ABCA916EAA}|Project\\Project.csproj|d:\\fm-backend-v02\\backend\\project\\project\\repository\\cleaningreportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8A39880-28D6-4964-ACFC-A5ABCA916EAA}|Project\\Project.csproj|solutionrelative:project\\repository\\cleaningreportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8A39880-28D6-4964-ACFC-A5ABCA916EAA}|Project\\Project.csproj|d:\\fm-backend-v02\\backend\\project\\project\\controllers\\cleaningreportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8A39880-28D6-4964-ACFC-A5ABCA916EAA}|Project\\Project.csproj|solutionrelative:project\\controllers\\cleaningreportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D8A39880-28D6-4964-ACFC-A5ABCA916EAA}|Project\\Project.csproj|d:\\fm-backend-v02\\backend\\project\\project\\controllers\\tagscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -45,10 +57,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D8A39880-28D6-4964-ACFC-A5ABCA916EAA}|Project\\Project.csproj|d:\\fm-backend-v02\\backend\\project\\project\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8A39880-28D6-4964-ACFC-A5ABCA916EAA}|Project\\Project.csproj|solutionrelative:project\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8A39880-28D6-4964-ACFC-A5ABCA916EAA}|Project\\Project.csproj|d:\\fm-backend-v02\\backend\\project\\project\\controllers\\criteriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8A39880-28D6-4964-ACFC-A5ABCA916EAA}|Project\\Project.csproj|solutionrelative:project\\controllers\\criteriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D8A39880-28D6-4964-ACFC-A5ABCA916EAA}|Project\\Project.csproj|d:\\fm-backend-v02\\backend\\project\\project\\controllers\\campuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -122,8 +130,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 9,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ICriteriaRepository.cs",
+              "DocumentMoniker": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Interface\\ICriteriaRepository.cs",
+              "RelativeDocumentMoniker": "Project\\Interface\\ICriteriaRepository.cs",
+              "ToolTip": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Interface\\ICriteriaRepository.cs",
+              "RelativeToolTip": "Project\\Interface\\ICriteriaRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T09:13:55.301Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{174bbdbc-a66d-385e-ab90-f40c77c8bc99}"
@@ -131,19 +152,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "IScheduleRepository.cs",
-              "DocumentMoniker": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Interface\\IScheduleRepository.cs",
-              "RelativeDocumentMoniker": "Project\\Interface\\IScheduleRepository.cs",
-              "ToolTip": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Interface\\IScheduleRepository.cs",
-              "RelativeToolTip": "Project\\Interface\\IScheduleRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAPAAAAAAAAAA==",
+              "Title": "CriteriaRepository.cs",
+              "DocumentMoniker": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Repository\\CriteriaRepository.cs",
+              "RelativeDocumentMoniker": "Project\\Repository\\CriteriaRepository.cs",
+              "ToolTip": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Repository\\CriteriaRepository.cs",
+              "RelativeToolTip": "Project\\Repository\\CriteriaRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T08:29:28.623Z",
+              "WhenOpened": "2024-12-03T09:14:05.556Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "TagsController.cs",
               "DocumentMoniker": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Controllers\\TagsController.cs",
               "RelativeDocumentMoniker": "Project\\Controllers\\TagsController.cs",
@@ -151,8 +172,7 @@
               "RelativeToolTip": "Project\\Controllers\\TagsController.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAgwCcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T08:06:07.357Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T08:06:07.357Z"
             },
             {
               "$type": "Document",
@@ -162,40 +182,40 @@
               "RelativeDocumentMoniker": "Project\\Controllers\\CleaningReportsController.cs",
               "ToolTip": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Controllers\\CleaningReportsController.cs",
               "RelativeToolTip": "Project\\Controllers\\CleaningReportsController.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAmwDwAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAAAAAAAAAAAlwDwAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-03T05:42:27.309Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "CleaningReportRepository.cs",
               "DocumentMoniker": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Repository\\CleaningReportRepository.cs",
               "RelativeDocumentMoniker": "Project\\Repository\\CleaningReportRepository.cs",
               "ToolTip": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Repository\\CleaningReportRepository.cs",
               "RelativeToolTip": "Project\\Repository\\CleaningReportRepository.cs",
-              "ViewState": "AgIAAHoBAAAAAAAAAAAAAHoBAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAGIAAAAAAAAAAADwv30AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-03T06:58:50.453Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ICleaningReportRepository.cs",
               "DocumentMoniker": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Interface\\ICleaningReportRepository.cs",
               "RelativeDocumentMoniker": "Project\\Interface\\ICleaningReportRepository.cs",
               "ToolTip": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Interface\\ICleaningReportRepository.cs",
               "RelativeToolTip": "Project\\Interface\\ICleaningReportRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABRAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-03T06:58:12.819Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "SchedulesController.cs",
               "DocumentMoniker": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Controllers\\SchedulesController.cs",
               "RelativeDocumentMoniker": "Project\\Controllers\\SchedulesController.cs",
@@ -203,25 +223,37 @@
               "RelativeToolTip": "Project\\Controllers\\SchedulesController.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAawCAAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T07:49:18.367Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T07:49:18.367Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "ScheduleRepository.cs",
               "DocumentMoniker": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Repository\\ScheduleRepository.cs",
               "RelativeDocumentMoniker": "Project\\Repository\\ScheduleRepository.cs",
               "ToolTip": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Repository\\ScheduleRepository.cs",
               "RelativeToolTip": "Project\\Repository\\ScheduleRepository.cs",
-              "ViewState": "AgIAAMAAAAAAAAAAAADwv9sAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAkwGIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-03T07:49:01.286Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 0,
+              "Title": "CriteriaController.cs",
+              "DocumentMoniker": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Controllers\\CriteriaController.cs",
+              "RelativeDocumentMoniker": "Project\\Controllers\\CriteriaController.cs",
+              "ToolTip": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Controllers\\CriteriaController.cs",
+              "RelativeToolTip": "Project\\Controllers\\CriteriaController.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAgwEYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T07:32:19.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "D:\\FM-Backend-V02\\backend\\Project\\Project\\appsettings.Development.json",
               "RelativeDocumentMoniker": "Project\\appsettings.Development.json",
@@ -229,25 +261,23 @@
               "RelativeToolTip": "Project\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-03T07:16:00.597Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T07:16:00.597Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CriteriaController.cs",
-              "DocumentMoniker": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Controllers\\CriteriaController.cs",
-              "RelativeDocumentMoniker": "Project\\Controllers\\CriteriaController.cs",
-              "ToolTip": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Controllers\\CriteriaController.cs",
-              "RelativeToolTip": "Project\\Controllers\\CriteriaController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "IScheduleRepository.cs",
+              "DocumentMoniker": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Interface\\IScheduleRepository.cs",
+              "RelativeDocumentMoniker": "Project\\Interface\\IScheduleRepository.cs",
+              "ToolTip": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Interface\\IScheduleRepository.cs",
+              "RelativeToolTip": "Project\\Interface\\IScheduleRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T07:32:19.444Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T08:29:28.623Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "UsersController.cs",
               "DocumentMoniker": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Project\\Controllers\\UsersController.cs",
@@ -255,12 +285,11 @@
               "RelativeToolTip": "Project\\Controllers\\UsersController.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAqwBYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T07:32:22.472Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T07:32:22.472Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "ITagRepository.cs",
               "DocumentMoniker": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Interface\\ITagRepository.cs",
               "RelativeDocumentMoniker": "Project\\Interface\\ITagRepository.cs",
@@ -268,12 +297,11 @@
               "RelativeToolTip": "Project\\Interface\\ITagRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T08:06:57.317Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T08:06:57.317Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "TagRepository.cs",
               "DocumentMoniker": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Repository\\TagRepository.cs",
               "RelativeDocumentMoniker": "Project\\Repository\\TagRepository.cs",
@@ -281,12 +309,11 @@
               "RelativeToolTip": "Project\\Repository\\TagRepository.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAowBsAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T08:07:08.554Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T08:07:08.554Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "TagsPerCriteriasController.cs",
               "DocumentMoniker": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Controllers\\TagsPerCriteriasController.cs",
               "RelativeDocumentMoniker": "Project\\Controllers\\TagsPerCriteriasController.cs",
@@ -294,12 +321,11 @@
               "RelativeToolTip": "Project\\Controllers\\TagsPerCriteriasController.cs",
               "ViewState": "AgIAAKkAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T08:08:04.514Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T08:08:04.514Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "GroupRoomsController.cs",
               "DocumentMoniker": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Controllers\\GroupRoomsController.cs",
               "RelativeDocumentMoniker": "Project\\Controllers\\GroupRoomsController.cs",
@@ -307,12 +333,11 @@
               "RelativeToolTip": "Project\\Controllers\\GroupRoomsController.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAswCAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T06:52:50.484Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T06:52:50.484Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "GroupRoomRepository.cs",
               "DocumentMoniker": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Repository\\GroupRoomRepository.cs",
               "RelativeDocumentMoniker": "Project\\Repository\\GroupRoomRepository.cs",
@@ -320,12 +345,11 @@
               "RelativeToolTip": "Project\\Repository\\GroupRoomRepository.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAQwCcAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T06:48:52.853Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T06:48:52.853Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "ResponsibleGroupRepository.cs",
               "DocumentMoniker": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Repository\\ResponsibleGroupRepository.cs",
               "RelativeDocumentMoniker": "Project\\Repository\\ResponsibleGroupRepository.cs",
@@ -333,12 +357,11 @@
               "RelativeToolTip": "Project\\Repository\\ResponsibleGroupRepository.cs",
               "ViewState": "AgIAADMAAAAAAAAAAAAswDYAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T06:43:46.514Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T06:43:46.514Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "GroupWithRoomsDto.cs",
               "DocumentMoniker": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Dto\\GroupWithRoomsDto.cs",
               "RelativeDocumentMoniker": "Project\\Dto\\GroupWithRoomsDto.cs",
@@ -346,12 +369,11 @@
               "RelativeToolTip": "Project\\Dto\\GroupWithRoomsDto.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAAwCUAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T06:42:31.519Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T06:42:31.519Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Program.cs",
               "RelativeDocumentMoniker": "Project\\Program.cs",
@@ -359,12 +381,11 @@
               "RelativeToolTip": "Project\\Program.cs",
               "ViewState": "AgIAAHkAAAAAAAAAAAAqwHwAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T09:21:20.383Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T09:21:20.383Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "CampusController.cs",
               "DocumentMoniker": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Controllers\\CampusController.cs",
               "RelativeDocumentMoniker": "Project\\Controllers\\CampusController.cs",
@@ -372,12 +393,11 @@
               "RelativeToolTip": "Project\\Controllers\\CampusController.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T09:21:13.59Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T09:21:13.59Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "CleaningFormsController.cs",
               "DocumentMoniker": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Controllers\\CleaningFormsController.cs",
               "RelativeDocumentMoniker": "Project\\Controllers\\CleaningFormsController.cs",
@@ -385,12 +405,11 @@
               "RelativeToolTip": "Project\\Controllers\\CleaningFormsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T06:57:20.662Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T06:57:20.662Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\FM-Backend-V02\\backend\\Project\\Project\\appsettings.json",
               "RelativeDocumentMoniker": "Project\\appsettings.json",
@@ -398,12 +417,11 @@
               "RelativeToolTip": "Project\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-29T09:22:12.008Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T09:22:12.008Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "IResponsibleGroupRepository.cs",
               "DocumentMoniker": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Interface\\IResponsibleGroupRepository.cs",
               "RelativeDocumentMoniker": "Project\\Interface\\IResponsibleGroupRepository.cs",
@@ -411,12 +429,11 @@
               "RelativeToolTip": "Project\\Interface\\IResponsibleGroupRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T06:42:19.264Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T06:42:19.264Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "ResponsibleGroupsController.cs",
               "DocumentMoniker": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Controllers\\ResponsibleGroupsController.cs",
               "RelativeDocumentMoniker": "Project\\Controllers\\ResponsibleGroupsController.cs",
@@ -424,12 +441,11 @@
               "RelativeToolTip": "Project\\Controllers\\ResponsibleGroupsController.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAgwCYAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T06:41:46.724Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T06:41:46.724Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "IGroupRoomRepository.cs",
               "DocumentMoniker": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Interface\\IGroupRoomRepository.cs",
               "RelativeDocumentMoniker": "Project\\Interface\\IGroupRoomRepository.cs",
@@ -437,12 +453,11 @@
               "RelativeToolTip": "Project\\Interface\\IGroupRoomRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T06:52:26.987Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T06:52:26.987Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "ShiftsController.cs",
               "DocumentMoniker": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Controllers\\ShiftsController.cs",
               "RelativeDocumentMoniker": "Project\\Controllers\\ShiftsController.cs",
@@ -450,12 +465,11 @@
               "RelativeToolTip": "Project\\Controllers\\ShiftsController.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAgwC8AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T05:43:34.222Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T05:43:34.222Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "ShiftRepository.cs",
               "DocumentMoniker": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Repository\\ShiftRepository.cs",
               "RelativeDocumentMoniker": "Project\\Repository\\ShiftRepository.cs",
@@ -463,12 +477,11 @@
               "RelativeToolTip": "Project\\Repository\\ShiftRepository.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T05:43:27.653Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T05:43:27.653Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "FilesController.cs",
               "DocumentMoniker": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Controllers\\FilesController.cs",
               "RelativeDocumentMoniker": "Project\\Controllers\\FilesController.cs",
@@ -476,12 +489,11 @@
               "RelativeToolTip": "Project\\Controllers\\FilesController.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T04:11:09.932Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T04:11:09.932Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "BlocksController.cs",
               "DocumentMoniker": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Controllers\\BlocksController.cs",
               "RelativeDocumentMoniker": "Project\\Controllers\\BlocksController.cs",
@@ -489,8 +501,7 @@
               "RelativeToolTip": "Project\\Controllers\\BlocksController.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAB0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T09:23:54.613Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T09:23:54.613Z"
             }
           ]
         }
