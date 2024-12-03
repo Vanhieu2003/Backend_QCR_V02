@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+<<<<<<< HEAD
+    <_PublishTargetUrl>C:\Users\Administrator\Desktop\Publish</_PublishTargetUrl>
+    <History>True|2024-10-06T16:53:24.8268679Z;</History>
+=======
+    <_PublishTargetUrl>D:\Publish\Qttb_host</_PublishTargetUrl>
+    <History>True|2024-10-03T09:07:14.8529707Z;True|2024-10-03T13:41:07.1122526+07:00;True|2024-10-03T12:50:21.1645382+07:00;True|2024-10-03T12:40:21.2601583+07:00;True|2024-10-03T12:26:43.4240790+07:00;True|2024-10-02T16:48:46.9385599+07:00;True|2024-10-02T14:47:53.7441810+07:00;True|2024-10-02T14:37:18.6226125+07:00;True|2024-09-30T11:10:14.0430303+07:00;True|2024-09-26T13:14:44.0854222+07:00;True|2024-09-25T13:41:50.5139512+07:00;True|2024-09-24T21:38:12.4117909+07:00;</History>
+>>>>>>> 579bf9acca3f6a300a1bc360abbe23a530fbe752
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>
