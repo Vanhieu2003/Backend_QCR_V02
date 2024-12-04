@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using backend.Constants;
+using backend.Filters;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Project.dto;
-using Project.Dto;
 using Project.Entities;
-using Project.Filters;
 using Project.Interface;
 
 namespace Project.Controllers
@@ -27,7 +27,7 @@ namespace Project.Controllers
         }
 
         [HttpGet]
-        
+        [ClaimPermission(PermissionConstants.AccessQcr)]
         public async Task<ActionResult<IEnumerable<BlockDto>>> GetBlocks()
         {
             var blocks = from b in _context.Blocks
@@ -52,8 +52,8 @@ namespace Project.Controllers
             return Ok(await sortedBlocks.ToListAsync());
         }
 
-        // Định nghĩa route theo dạng ByCampus/campusId và nhận campusId từ query string
         [HttpGet("ByCampus")]
+        [ClaimPermission(PermissionConstants.AccessQcr)]
         public async Task<IActionResult> GetBlocksByCampusId([FromQuery] string campusId)
         {
             if (string.IsNullOrEmpty(campusId))
@@ -71,6 +71,7 @@ namespace Project.Controllers
 
         // GET: api/Blocks/5
         [HttpGet("id")]
+        [ClaimPermission(PermissionConstants.AccessQcr)]
         public async Task<ActionResult<Block>> GetBlock([FromQuery] string id)
         {
             if (_context.Blocks == null)

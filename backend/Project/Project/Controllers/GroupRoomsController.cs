@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using backend.Constants;
+using backend.Filters;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -25,6 +27,7 @@ namespace Project.Controllers
         }
 
         [HttpGet]
+        [ClaimPermission(PermissionConstants.ViewForm)]
         public async Task<IActionResult> GetGroupRooms()
         {
             var result = await _roomRepository.GetAllGroupWithRooms();
@@ -33,6 +36,7 @@ namespace Project.Controllers
 
 
         [HttpGet("id")]
+        [ClaimPermission(PermissionConstants.ViewForm)]
         public async Task<ActionResult<RoomGroupViewDto>> GetRoomGroupById([FromQuery] string id)
         {
             var result = await _roomRepository.GetRoomGroupById(id);
@@ -40,6 +44,7 @@ namespace Project.Controllers
         }
 
         [HttpPut]
+        [ClaimPermission(PermissionConstants.ModifyForm)]
         public async Task<IActionResult> UpdateRoomGroup([FromQuery] string id, [FromBody] RoomGroupUpdateDto dto)
         {
             try
@@ -93,6 +98,7 @@ namespace Project.Controllers
         }
 
         [HttpPost]
+        [ClaimPermission(PermissionConstants.ModifyForm)]
         public async Task<IActionResult> CreateGroupWithRooms([FromBody] GroupWithRoomsDto dto)
         {
             try

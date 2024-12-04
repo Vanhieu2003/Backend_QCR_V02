@@ -1,3 +1,4 @@
+
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.EntityFrameworkCore;
@@ -6,51 +7,49 @@ using Microsoft.IdentityModel.Logging;
 using Microsoft.OpenApi.Models;
 using Project.Entities;
 using Project.Interface;
+using Project.Middleware;
 using Project.Repository;
+using Project.Service.User;
 using System.Net;
 
 var MyAllowSpecificOrigins = "ClientPermission";
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
 
 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 IdentityModelEventSource.ShowPII = true;
 
 builder.Services.AddControllers();
 
-
-
-
+// Configure Swagger/OpenAPI
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-//builder.Services.AddSwaggerGen(options =>
-//{
-//    options.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
-//    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-//    {
-//        Name = "Authorization",
-//        Type = SecuritySchemeType.Http,
-//        Scheme = "bearer",
-//        BearerFormat = "JWT",
-//        In = ParameterLocation.Header,
-//        Description = "Enter 'Bearer' [space] and then your token in the text input below.",
-//    });
-//    options.AddSecurityRequirement(new OpenApiSecurityRequirement
-//    {
-//        {
-//            new OpenApiSecurityScheme
-//            {
-//                Reference = new OpenApiReference
-//                {
-//                    Type = ReferenceType.SecurityScheme,
-//                    Id = "Bearer"
-//                }
-//            },
-//            Array.Empty<string>()
-//        }
-//    });
-//});
+//builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
+    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = SecuritySchemeType.Http,
+        Scheme = "bearer",
+        BearerFormat = "JWT",
+        In = ParameterLocation.Header,
+        Description = "Enter 'Bearer' [space] and then your token in the text input below.",
+    });
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            Array.Empty<string>()
+        }
+    });
+});
 
 // CORS configuration
 builder.Services.AddCors(options =>
@@ -112,6 +111,8 @@ builder.Services.AddScoped<IUserPerTagRepository, UserPerTagRepository>();
 builder.Services.AddScoped<IResponsibleGroupRepository, ResponsibleGroupRepository>();
 builder.Services.AddScoped<IQRScannerRepository,QRScannerRepository>();
 builder.Services.AddScoped<IChartRepository, ChartRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
+
 
 
 // Add Static Files Middleware
@@ -142,11 +143,22 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-app.UseCors(MyAllowSpecificOrigins);
+
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 app.UseHttpsRedirection();
 
+app.UseCors(MyAllowSpecificOrigins);
+app.UseAuthentication(); // Ensure authentication is used before authorization
 app.UseAuthorization();
 
 app.MapControllers();
 
+// Optional endpoint to show server status
+app.MapGet("/", async context =>
+{
+    context.Response.ContentType = "text/html";
+    await context.Response.WriteAsync("Internal Server is ready!");
+});
+
 app.Run();
+

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
 using System.Threading.Tasks;
+using backend.Constants;
+using backend.Filters;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -28,6 +30,7 @@ namespace Project.Controllers
 
      
         [HttpGet("GetAll")]
+        [ClaimPermission(PermissionConstants.ViewForm)]
         public async Task<ActionResult<IEnumerable<Criteria>>> GetCriteria()
         {
             var criterias = await _repo.GetAllCriteria();
@@ -37,6 +40,7 @@ namespace Project.Controllers
       
 
         [HttpGet("ByRoom")]
+        [ClaimPermission(PermissionConstants.ViewForm)]
         public async Task<IActionResult> GetCriteriasByRoomCategoricalId([FromQuery] string RoomCategoricalId)
         {
             var criteriaList = await _repo.GetCriteriasByRoomsCategoricalId(RoomCategoricalId);
@@ -47,6 +51,7 @@ namespace Project.Controllers
             return Ok(criteriaList);
         }
         [HttpGet("ByRoomId")]
+        [ClaimPermission(PermissionConstants.ViewForm)]
         public async Task<IActionResult> GetCriteriasByRoomId([FromQuery] string RoomId)
         {
             var criteriaList = await _repo.GetCriteriasByRoomId(RoomId);
@@ -58,6 +63,7 @@ namespace Project.Controllers
         }
 
         [HttpGet("search")]
+        [ClaimPermission(PermissionConstants.ViewForm)]
         public async Task<IActionResult> SearchCriteria([FromQuery] string keyword)
         {
             // Execute search using repository
@@ -69,6 +75,7 @@ namespace Project.Controllers
 
 
         [HttpPut]
+        [ClaimPermission(PermissionConstants.ModifyForm)]
         public async Task<IActionResult> DisableCriteria([FromQuery] string id)
         {
             // Kiểm tra nếu _context.Criteria null
@@ -95,6 +102,7 @@ namespace Project.Controllers
         }
 
         [HttpPost("CreateCriteria")]
+        [ClaimPermission(PermissionConstants.ModifyForm)]
         public async Task<IActionResult> CreateCriteria([FromBody] CreateCriteriaDto criteriaDto)
         {
             try

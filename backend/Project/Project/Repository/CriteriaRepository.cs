@@ -16,16 +16,18 @@ namespace Project.Repository
 
         public async Task<Criteria> CreateCriteria(CreateCriteriaDto criteriaDto)
         {
-            
+
             var existingCriteria = await _context.Criteria
-                .FirstOrDefaultAsync(c => c.CriteriaName == criteriaDto.CriteriaName && c.Status == "ENABLE");
+        .FirstOrDefaultAsync(c => c.CriteriaName == criteriaDto.CriteriaName
+                                   && c.RoomCategoryId == criteriaDto.RoomCategoryId
+                                   && c.Status == "ENABLE");
 
             if (existingCriteria != null)
             {
-                throw new Exception($"CriteriaName '{criteriaDto.CriteriaName}' đã tồn tại.");
+                throw new Exception($"CriteriaName '{criteriaDto.CriteriaName}' đã tồn tại trong RoomCategory '{criteriaDto.RoomCategoryId}'.");
             }
 
-   
+
             var newCriteria = new Criteria
             {
                 Id = Guid.NewGuid().ToString(),

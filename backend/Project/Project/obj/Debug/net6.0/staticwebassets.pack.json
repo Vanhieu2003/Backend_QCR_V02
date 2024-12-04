@@ -1,24 +1,28 @@
 {
   "Files": [
     {
-      "Id": "D:\\Project\\FMedu-DGCL\\backend\\Project\\Project\\wwwroot\\uploads\\638621889874728231.png",
+      "Id": "D:\\FM-Backend-V02\\backend\\Project\\Project\\wwwroot\\uploads\\638621889874728231.png",
       "PackagePath": "staticwebassets\\uploads\\638621889874728231.png"
     },
     {
-      "Id": "D:\\Project\\FMedu-DGCL\\backend\\Project\\Project\\wwwroot\\uploads\\638622536832977215.jpg",
+      "Id": "D:\\FM-Backend-V02\\backend\\Project\\Project\\wwwroot\\uploads\\638622536832977215.jpg",
       "PackagePath": "staticwebassets\\uploads\\638622536832977215.jpg"
     },
     {
-      "Id": "D:\\Project\\FMedu-DGCL\\backend\\Project\\Project\\wwwroot\\uploads\\638661418676179446.jpg",
+      "Id": "D:\\FM-Backend-V02\\backend\\Project\\Project\\wwwroot\\uploads\\638661418676179446.jpg",
       "PackagePath": "staticwebassets\\uploads\\638661418676179446.jpg"
     },
     {
-      "Id": "D:\\Project\\FMedu-DGCL\\backend\\Project\\Project\\wwwroot\\uploads\\638663982197440212.jpg",
+      "Id": "D:\\FM-Backend-V02\\backend\\Project\\Project\\wwwroot\\uploads\\638663982197440212.jpg",
       "PackagePath": "staticwebassets\\uploads\\638663982197440212.jpg"
     },
     {
-      "Id": "D:\\Project\\FMedu-DGCL\\backend\\Project\\Project\\wwwroot\\uploads\\638663982759752106.jpg",
+      "Id": "D:\\FM-Backend-V02\\backend\\Project\\Project\\wwwroot\\uploads\\638663982759752106.jpg",
       "PackagePath": "staticwebassets\\uploads\\638663982759752106.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Project.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Project.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using backend.Constants;
+using backend.Filters;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -25,6 +27,7 @@ namespace Project.Controllers
 
         // API lấy Floor theo BlockId, dùng query parameter
         [HttpGet("Block")]
+        [ClaimPermission(PermissionConstants.AccessQcr)]
         public async Task<IActionResult> GetFloorByBlockId([FromQuery] string BlockId)
         {
             var floor = await _repo.GetFloorByBlockId(BlockId);
@@ -37,6 +40,7 @@ namespace Project.Controllers
 
         // API lấy Floor theo id, dùng query parameter
         [HttpGet]
+        [ClaimPermission(PermissionConstants.AccessQcr)]
         public async Task<ActionResult<Floor>> GetFloor([FromQuery] string id)
         {
             if (_context.Floors == null)

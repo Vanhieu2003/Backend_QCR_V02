@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using backend.Constants;
+using backend.Filters;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -22,6 +24,7 @@ namespace Project.Controllers
         }
 
         [HttpGet]
+        [ClaimPermission(PermissionConstants.ViewSchedule)]
         public async Task<ActionResult<IEnumerable<UserDto>>> GetUsers()
         {
             var user = from u in _context.Users

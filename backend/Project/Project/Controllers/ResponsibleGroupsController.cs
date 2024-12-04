@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using backend.Constants;
+using backend.Filters;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -25,8 +27,8 @@ namespace Project.Controllers
             _repo = respoonsibleGroupRepository;
         }
 
-        // GET: api/ResponsibleGroups
         [HttpGet]
+        [ClaimPermission(PermissionConstants.ViewSchedule)]
         public async Task<IActionResult> GetResponsibleGroups()
         {
             var result = await _repo.GetAllResponsiableGroup();
@@ -34,6 +36,7 @@ namespace Project.Controllers
         }
 
         [HttpGet("all")]
+        [ClaimPermission(PermissionConstants.ViewForm)]
         public async Task<IActionResult> GetAll()
         {
             var result = await _repo.GetAll();
@@ -44,6 +47,7 @@ namespace Project.Controllers
 
         // GET: api/ResponsibleGroups/5
         [HttpGet("id")]
+        [ClaimPermission(PermissionConstants.ViewForm)]
         public async Task<ActionResult<ResponsiableGroupDto>> GetResponsibleGroup([FromQuery] string id)
         {
             var result = await _repo.GetAllResponsiableGroupById(id);
@@ -58,6 +62,7 @@ namespace Project.Controllers
 
 
         [HttpPut]
+        [ClaimPermission(PermissionConstants.ModifyForm)]
         public async Task<IActionResult> UpdateResponsibleGroup([FromQuery] string id, [FromBody] ResponsibleGroupUpdateDto dto)
         {
             try
@@ -119,6 +124,7 @@ namespace Project.Controllers
 
 
         [HttpPost]
+        [ClaimPermission(PermissionConstants.ModifyForm)]
         public async Task<IActionResult> CreateResponsiableGroupWithUser([FromBody] ResponsiableGroupDto dto)
         {
             try

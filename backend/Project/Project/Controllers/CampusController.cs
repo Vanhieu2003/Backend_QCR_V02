@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using backend.Constants;
+using backend.Filters;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -24,6 +26,7 @@ namespace Project.Controllers
 
         // GET: api/Campus
         [HttpGet]
+        [ClaimPermission(PermissionConstants.AccessQcr)]
         public async Task<ActionResult<IEnumerable<CampusDto>>> GetCampus()
         {
             var campuses = from c in _context.Campuses
@@ -46,6 +49,7 @@ namespace Project.Controllers
 
         // API lấy thông tin campus theo id, dùng query parameter
         [HttpGet("id")]
+        [ClaimPermission(PermissionConstants.AccessQcr)]
         public async Task<ActionResult<Campus>> GetCampusById([FromQuery] string id)
         {
             if (_context.Campuses == null)

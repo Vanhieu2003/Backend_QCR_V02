@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using backend.Constants;
+using backend.Filters;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -26,6 +28,7 @@ namespace Project.Controllers
 
         // GET: api/CleaningForms
         [HttpGet]
+        [ClaimPermission(PermissionConstants.ViewForm)]
         public async Task<ActionResult<IEnumerable<object>>> GetCleaningForms()
         {
             var results = await (from cf in _context.CleaningForms
@@ -69,6 +72,7 @@ namespace Project.Controllers
 
         // GET: api/CleaningForms/GetFullInfo?formId={formId}
         [HttpGet("GetFullInfo")]
+        [ClaimPermission(PermissionConstants.ViewForm)]
         public async Task<ActionResult> GetFormDetails([FromQuery] string formId)
         {
             var form = await _context.CleaningForms.FirstOrDefaultAsync(f => f.Id == formId);
@@ -150,6 +154,7 @@ namespace Project.Controllers
 
         // GET: api/CleaningForms/criteria?formId={formId}
         [HttpGet("criteria")]
+        [ClaimPermission(PermissionConstants.ViewForm)]
         public async Task<IActionResult> GetCriteriaByFormId([FromQuery] string formId)
         {
             var criteria = await _repo.GetCriteriaByFormId(formId);
@@ -162,6 +167,7 @@ namespace Project.Controllers
 
         // GET: api/CleaningForms/ByRoomId?RoomId={RoomId}
         [HttpGet("ByRoomId")]
+        [ClaimPermission(PermissionConstants.ViewForm)]
         public async Task<IActionResult> GetFormByRoomId([FromQuery] string RoomId)
         {
             var form = await _repo.GetCleaningFormByRoomId(RoomId);
@@ -174,6 +180,7 @@ namespace Project.Controllers
 
         // PUT: api/CleaningForms?id={id}
         [HttpPut]
+        [ClaimPermission(PermissionConstants.ModifyForm)]
         public async Task<IActionResult> PutCleaningForm([FromQuery] string id, [FromBody] CleaningForm cleaningForm)
         {
             if (id != cleaningForm.Id)
@@ -204,6 +211,7 @@ namespace Project.Controllers
 
         // POST: api/CleaningForms
         [HttpPost]
+        [ClaimPermission(PermissionConstants.ModifyForm)]
         public async Task<ActionResult<CleaningForm>> PostCleaningForm([FromBody] CleaningForm cleaningForm)
         {
             if (_context.CleaningForms == null)
@@ -245,6 +253,7 @@ namespace Project.Controllers
         }
 
         [HttpPost("create-form")]
+        [ClaimPermission(PermissionConstants.ModifyForm)]
         public async Task<IActionResult> CreateCleaningForms([FromBody] CreateCleaningFormRequest request)
         {
             try

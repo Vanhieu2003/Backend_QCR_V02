@@ -7,5 +7,6 @@ namespace Project.Interface
     public interface IUserPerTagRepository
     {
         public Task CreateUserPerGroup(AssignUserRequest request);
+        public Task UpdateUsersForTag(UpdateUserRequest request);
     }
 }

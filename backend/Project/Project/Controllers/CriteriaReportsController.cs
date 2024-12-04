@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using backend.Constants;
+using backend.Filters;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -26,6 +28,7 @@ namespace Project.Controllers
 
         // GET: api/CriteriaReports
         [HttpGet]
+        [ClaimPermission(PermissionConstants.ViewForm)]
         public async Task<ActionResult<IEnumerable<CriteriaReport>>> GetCriteriaReports()
         {
             if (_context.CriteriaReports == null)
@@ -37,6 +40,7 @@ namespace Project.Controllers
 
         // GET: api/CriteriaReports/5
         [HttpGet("id")]
+        [ClaimPermission(PermissionConstants.ViewForm)]
         public async Task<ActionResult<CriteriaReport>> GetCriteriaReport([FromQuery] string id)
         {
             if (_context.CriteriaReports == null)
@@ -54,6 +58,7 @@ namespace Project.Controllers
         }
 
         [HttpGet("Criteria")]
+        [ClaimPermission(PermissionConstants.ViewForm)]
         public async Task<IActionResult> GetReportByCriteriaId([FromQuery] string criteriaId)
         {
             var reports = await _repo.GetReportByCriteriaId(criteriaId);
@@ -70,6 +75,7 @@ namespace Project.Controllers
        
 
         [HttpPost]
+        [ClaimPermission(PermissionConstants.ModifyForm)]
         public async Task<ActionResult<CriteriaReport>> PostCriteriaReport([FromBody] CriteriaReport criteriaReport)
         {
             

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using backend.Constants;
+using backend.Filters;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -27,6 +29,7 @@ namespace Project.Controllers
 
     
         [HttpGet("ByFormId")]
+        [ClaimPermission(PermissionConstants.ViewForm)]
         public async Task<IActionResult> GetCriteriaByFormId([FromQuery] string formId)
         {
             var criteria = await _repo.GetCriteriaByFormId(formId);
@@ -41,6 +44,7 @@ namespace Project.Controllers
 
 
         [HttpPut("edit")]
+        [ClaimPermission(PermissionConstants.ModifyForm)]
         public async Task<ActionResult> EditForm([FromBody] EditFormDto formData)
         {
             // Tìm form hiện tại
@@ -74,6 +78,7 @@ namespace Project.Controllers
 
        
         [HttpPost("newForm")]
+        [ClaimPermission(PermissionConstants.ModifyForm)]
         public async Task<ActionResult> AddTagsForCriteria([FromBody] CriteriaPerFormDto newForm)
         {
             foreach (var criteria in newForm.criteriaList)

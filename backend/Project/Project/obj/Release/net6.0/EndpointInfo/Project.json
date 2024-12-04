@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "Project",
-    "version": "1.0"
+    "title": "API",
+    "version": "v1"
   },
   "paths": {
     "/api/Blocks": {
@@ -746,14 +746,14 @@
         }
       }
     },
-    "/api/CleaningReports/GetAllInfoByManageId": {
+    "/api/CleaningReports/GetAllInfoByManagerId": {
       "get": {
         "tags": [
           "CleaningReports"
         ],
         "parameters": [
           {
-            "name": "manageId",
+            "name": "managerId",
             "in": "query",
             "schema": {
               "type": "string"
@@ -5947,10 +5947,6 @@
             "type": "string",
             "nullable": true
           },
-          "userId": {
-            "type": "string",
-            "nullable": true
-          },
           "criteriaList": {
             "type": "array",
             "items": {
@@ -6318,6 +6314,19 @@
         },
         "additionalProperties": false
       }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "description": "Enter 'Bearer' [space] and then your token in the text input below.",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
     }
-  }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using backend.Constants;
+using backend.Filters;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis.CSharp;
@@ -31,6 +33,7 @@ namespace Project.Controllers
 
         // GET: api/CleaningReports
         [HttpGet]
+        [ClaimPermission(PermissionConstants.ViewReport)]
         public async Task<ActionResult<IEnumerable<CleaningReport>>> GetCleaningReports()
         {
            
@@ -39,6 +42,7 @@ namespace Project.Controllers
 
         // GET: api/CleaningReports/5
         [HttpGet("GetById")]
+        [ClaimPermission(PermissionConstants.ViewReport)]
         public async Task<ActionResult<CleaningReportDetailsDto>> GetCleaningReport([FromQuery] string id)
         {
            
@@ -48,6 +52,7 @@ namespace Project.Controllers
 
         // GET: api/CleaningReports/ByCleaningForm
         [HttpGet("GetByCleaningForm")]
+        [ClaimPermission(PermissionConstants.ViewReport)]
         public async Task<IActionResult> GetCleaningReportByCleaningForm([FromQuery] string formId)
         {
             var reports = await _repo.GetCleaningReportByCleaningForm(formId);
@@ -55,6 +60,7 @@ namespace Project.Controllers
         }
 
         [HttpGet("GetAllInfo")]
+        [ClaimPermission(PermissionConstants.ViewReport)]
         public async Task<IActionResult> GetAllCleaningReport()
         {
           
@@ -64,6 +70,7 @@ namespace Project.Controllers
         }
 
         [HttpGet("GetAllInfoByUserId")]
+        [ClaimPermission(PermissionConstants.ViewReport)]
         public async Task<IActionResult> GetCleaningReportByUserId(string userId)
         {
 
@@ -74,6 +81,7 @@ namespace Project.Controllers
 
 
         [HttpGet("GetAllInfoByManagerId")]
+        [ClaimPermission(PermissionConstants.ViewReport)]
         public async Task<IActionResult> GetCleaningReportByManagerId(string managerId)
         {
 
@@ -84,15 +92,10 @@ namespace Project.Controllers
 
 
 
-            [HttpGet("GetReportInfo")]
-        public async Task<IActionResult> GetReportInfoByReportId([FromQuery] string reportId)
-        {
-            var report = await _repo.GetInfoByReportId(reportId);
-            return Ok(report);
-        }
 
 
         [HttpGet("GetFullInfo")]
+        [ClaimPermission(PermissionConstants.ViewReport)]
         public async Task<ActionResult> GetReportDetails([FromQuery] string reportId)
         {
             
@@ -104,6 +107,7 @@ namespace Project.Controllers
 
 
         [HttpPut("update")]
+        [ClaimPermission(PermissionConstants.ModifyReport)]
         public async Task<IActionResult> UpdateCriteriaAndCleaningReport([FromBody] UpdateCleaningReportRequest request)
         {
             try
@@ -122,6 +126,7 @@ namespace Project.Controllers
         }
 
         [HttpPost("create")]
+        [ClaimPermission(PermissionConstants.ModifyReport)]
         public async Task<ActionResult<CleaningReport>> CreateCleaningReport([FromBody] CleaningReportRequest request)
         {         
             var cleaningReport = await _repo.CreateCleaningReportAsync(request);
@@ -129,6 +134,7 @@ namespace Project.Controllers
         }
 
         [HttpPost("user-score")]
+        [ClaimPermission(PermissionConstants.ModifyReport)]
         public async Task<IActionResult> Evaluate([FromBody] EvaluationRequest request)
         {
             var userScores = await _repo.EvaluateUserScores(request);

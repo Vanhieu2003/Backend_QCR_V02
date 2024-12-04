@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using backend.Constants;
+using backend.Filters;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Project.Dto;
 using Project.Entities;
@@ -23,12 +25,33 @@ namespace Project.Controllers
         }
 
         [HttpPost]
+        [ClaimPermission(PermissionConstants.ModifyForm)]
         public async Task<IActionResult> CreateUsersPerTag([FromBody] AssignUserRequest request)
         {
             try
             {
                 await _repo.CreateUserPerGroup(request);
                 return Ok("Thêm thành công");
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+
+        [HttpPut]
+        [ClaimPermission(PermissionConstants.ModifyForm)]
+        public async Task<IActionResult> UpdateUsersPerTag([FromBody] UpdateUserRequest request)
+        {
+            try
+            {
+                await _repo.UpdateUsersForTag(request);
+                return Ok("Chỉnh sửa thành công");
             }
             catch (ArgumentException ex)
             {

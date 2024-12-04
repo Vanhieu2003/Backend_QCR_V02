@@ -435,10 +435,24 @@ namespace Project.Repository
             // Lấy users theo tags
             var usersByTags = await GetUsersByTags(reportId);
 
+            var users = await _context.CleaningReports
+                 .Where(cr => cr.Id == reportId)
+                 .Join(
+                     _context.Users,
+                     cr => cr.UserId,           
+                     u => u.Id,                 
+                     (cr, u) => new             
+                     {
+                         FullName = $"{u.FirstName} {u.LastName}"
+                     }
+                 )
+                  .FirstOrDefaultAsync();
+
             return new
             {
                 Id = reportId,
                 CampusName = campus?.CampusName,
+                FullName=users?.FullName,
                 BlockName = block?.BlockName,
                 FloorName = floor?.FloorName,
                 RoomName = room?.RoomName,

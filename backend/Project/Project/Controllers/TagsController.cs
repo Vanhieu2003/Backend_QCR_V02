@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using backend.Constants;
+using backend.Filters;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -26,6 +28,7 @@ namespace Project.Controllers
 
         // GET: api/Tags
         [HttpGet]
+        [ClaimPermission(PermissionConstants.ViewForm)]
         public async Task<ActionResult<IEnumerable<Tag>>> GetTags()
         {
             if (_context.Tags == null)
@@ -36,6 +39,7 @@ namespace Project.Controllers
         }
 
         [HttpGet("GetTagGroups")]
+        [ClaimPermission(PermissionConstants.ViewForm)]
         public async Task<IActionResult> GetTagGroupsWithUserCount()
         {
             var tagGroups = await _repo.GetTagGroupsWithUserCountAsync();
@@ -46,6 +50,7 @@ namespace Project.Controllers
 
 
         [HttpGet("GetGroupInfoByTagId")]
+        [ClaimPermission(PermissionConstants.ViewForm)]
         public async Task<IActionResult> GetGroupInfoByTagId([FromQuery] string tagId)
         {
             var result = await _repo.GetGroupInfoByTagId(tagId);
@@ -54,6 +59,7 @@ namespace Project.Controllers
 
         // GET: api/Tags
         [HttpGet("GetTag")]
+        [ClaimPermission(PermissionConstants.ViewForm)]
         public async Task<ActionResult<Tag>> GetTag([FromQuery] string id)
         {
             if (_context.Tags == null)
@@ -71,6 +77,7 @@ namespace Project.Controllers
         }
 
         [HttpGet("tagspercriteria")]
+        [ClaimPermission(PermissionConstants.ViewForm)]
         public async Task<IActionResult> GetCriteriaTagByTag([FromQuery] string tagId)
         {
             var tags = await _repo.GetTagsPerCriteriaByTag(tagId);
@@ -82,6 +89,7 @@ namespace Project.Controllers
         }
 
         [HttpGet("average-ratings")]
+        [ClaimPermission(PermissionConstants.ViewForm)]
         public async Task<IActionResult> GetTagAverageRatings()
         {
             var result = await _repo.GetTagAverageRatingsAsync();
@@ -92,10 +100,7 @@ namespace Project.Controllers
 
        
 
-        private bool TagExists(string id)
-        {
-            return (_context.Tags?.Any(e => e.Id == id)).GetValueOrDefault();
-        }
+      
 
 
     }

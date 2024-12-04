@@ -63,8 +63,8 @@ namespace Project.Repository
                     Id = Guid.NewGuid().ToString(),
                     TagId = request.TagId,
                     UserId = userId,
-                    CreateAt = DateTime.Now,
-                    UpdateAt = DateTime.Now
+                    CreateAt = GetCurrentTimeInGmtPlus7(),
+                    UpdateAt = GetCurrentTimeInGmtPlus7()
                 };
 
                 _context.UserPerTags.Add(userPerTag);
@@ -72,5 +72,64 @@ namespace Project.Repository
 
             await _context.SaveChangesAsync();
         }
+
+
+        public async Task UpdateUsersForTag(UpdateUserRequest request)
+        {
+            if (request == null || string.IsNullOrWhiteSpace(request.Id) || request.Users == null || !request.Users.Any())
+            {
+                throw new ArgumentException("Invalid request data");
+            }
+
+            // Lấy danh sách các userId đã tồn tại trong bảng UserPerTag với TagId
+            var existingUserIds = await _context.UserPerTags
+                .Where(ut => ut.TagId == request.Id)
+                .Select(ut => ut.UserId)
+                .ToListAsync();
+
+            // Lọc danh sách người dùng mới (chỉ thêm user chưa tồn tại)
+            var newUserIds = request.Users.Except(existingUserIds).ToList();
+
+            // Lọc danh sách người dùng cần xóa (tồn tại trong database nhưng không có trong danh sách mới)
+            var userIdsToDelete = existingUserIds.Except(request.Users).ToList();
+
+            // Thêm các user mới vào cơ sở dữ liệu
+            if (newUserIds.Any())
+            {
+                var newUserPerTags = newUserIds.Select(userId => new UserPerTag
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    TagId = request.Id,
+                    UserId = userId,
+                    CreateAt = GetCurrentTimeInGmtPlus7(),
+                    UpdateAt = GetCurrentTimeInGmtPlus7()
+                }).ToList();
+
+                await _context.UserPerTags.AddRangeAsync(newUserPerTags);
+            }
+
+            // Xóa các user không còn trong danh sách
+            if (userIdsToDelete.Any())
+            {
+                var usersToDelete = await _context.UserPerTags
+                    .Where(ut => ut.TagId == request.Id && userIdsToDelete.Contains(ut.UserId))
+                    .ToListAsync();
+
+                _context.UserPerTags.RemoveRange(usersToDelete);
+            }
+
+            // Lưu các thay đổi vào cơ sở dữ liệu
+            await _context.SaveChangesAsync();
+        }
+
+
+        private DateTime GetCurrentTimeInGmtPlus7()
+        {
+
+            TimeZoneInfo gmtPlus7 = TimeZoneInfo.FindSystemTimeZoneById("SE Asia Standard Time");
+
+            return TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, gmtPlus7);
+        }
+
     }
 }

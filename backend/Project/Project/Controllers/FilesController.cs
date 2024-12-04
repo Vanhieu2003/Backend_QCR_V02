@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using backend.Constants;
+using backend.Filters;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.StaticFiles;
 using Project.Entities;
@@ -21,6 +23,7 @@ namespace Project.Controllers
         // API để upload file và lưu URL vào bảng CriteriaReport
         [HttpPost]
         [Route("UploadFile")]
+        [ClaimPermission(PermissionConstants.ModifyReport)]
         public async Task<IActionResult> UploadFile(IFormFile file)
         {
             if (file == null || file.Length == 0)
@@ -43,6 +46,7 @@ namespace Project.Controllers
 
         [HttpPost]
         [Route("UploadFiles")]
+        [ClaimPermission(PermissionConstants.ModifyReport)]
         public async Task<IActionResult> UploadFiles(List<IFormFile> files)
         {
             if (files == null || !files.Any())
@@ -71,6 +75,7 @@ namespace Project.Controllers
         // API để tải file từ server và trả về file
         [HttpGet]
         [Route("DownloadFile")]
+        [ClaimPermission(PermissionConstants.ViewReport)]
         public async Task<IActionResult> DownloadFile(string filename)
         {
             var filepath = Path.Combine(_hostingEnvironment.WebRootPath, "uploads", filename);
@@ -93,6 +98,7 @@ namespace Project.Controllers
         // API để xóa file vật lý khỏi hệ thống
         [HttpDelete]
         [Route("DeleteFile")]
+        [ClaimPermission(PermissionConstants.ModifyReport)]
         public IActionResult DeleteFile(string filename)
         {
             if (string.IsNullOrEmpty(filename))

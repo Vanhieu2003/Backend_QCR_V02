@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using backend.Constants;
+using backend.Filters;
+using Microsoft.AspNetCore.Mvc;
 using Project.Dto;
 using Project.Entities;
 using Project.Interface;
@@ -19,6 +21,7 @@ namespace Project.Controllers
         }
 
         [HttpGet("GetInfo")]
+        [ClaimPermission(PermissionConstants.ModifyReport)]
         public async Task<IActionResult> getInfoByQR([FromQuery] string roomCode)
         {
             try

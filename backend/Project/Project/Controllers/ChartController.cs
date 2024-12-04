@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using backend.Constants;
+using backend.Filters;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
@@ -23,6 +25,7 @@ namespace Project.Controllers
         
         
         [HttpGet("GetTopCriteriaValuesByCampus")]
+        [ClaimPermission(PermissionConstants.ModifyReport)]
         public async Task<IActionResult> GetTopCriteriaValuesByCampus([FromQuery] string? campusId)
         {
             var result = await _repo.GetTopCriteriaValuesByCampus(campusId);
@@ -30,6 +33,7 @@ namespace Project.Controllers
         }
 
         [HttpGet("GetCleaningReportsByQuarter")]
+        [ClaimPermission(PermissionConstants.ModifyReport)]
         public async Task<IActionResult> GetCleaningReportsByQuarter()
         {
             var result = await _repo.GetCleaningReportsByQuarter();
@@ -38,6 +42,7 @@ namespace Project.Controllers
 
         // thêm giao diện
         [HttpGet("GetCleaningReportsByMonth")]
+        [ClaimPermission(PermissionConstants.ModifyReport)]
         public async Task<IActionResult> GetCleaningReportsByMonth(int? month = null, int? year = null)
         {
 
@@ -61,6 +66,7 @@ namespace Project.Controllers
        
 
         [HttpGet("comparison")]
+        [ClaimPermission(PermissionConstants.ModifyReport)]
         public async Task<IActionResult> GetCampusReportComparison(int? year = null)
         {
             var result = await _repo.GetCampusReportComparison(year);
@@ -68,6 +74,7 @@ namespace Project.Controllers
         }
 
         [HttpGet("summary")]
+        [ClaimPermission(PermissionConstants.ModifyReport)]
         public async Task<IActionResult> GetCleaningReportSummary([FromQuery] string? campusId)
         {
             var result = await _repo.GetCleaningReportSummary(campusId);
@@ -75,6 +82,7 @@ namespace Project.Controllers
         }
 
         [HttpGet("responsible-tag-report")]
+        [ClaimPermission(PermissionConstants.ModifyReport)]
         public async Task<IActionResult> GetResponsibleTagReportByCampus([FromQuery] string? campusId)
         {
             var result = await _repo.GetResponsibleTagReportByCampus(campusId);
@@ -82,6 +90,7 @@ namespace Project.Controllers
         }
 
         [HttpGet("room-group-report")]
+        [ClaimPermission(PermissionConstants.ModifyReport)]
         public async Task<IActionResult> GetRoomGroupReportByCampus([FromQuery] string? campusId)
         {
             var result = await _repo.GetRoomGroupReportByCampus(campusId);
@@ -89,6 +98,7 @@ namespace Project.Controllers
         }
 
         [HttpGet("detail-report")]
+        [ClaimPermission(PermissionConstants.ModifyReport)]
         public async Task<IActionResult> GetCampusDetailReportById([FromQuery] string? campusId)
         {
             var result = await _repo.GetCampusDetailReportById(campusId);
@@ -96,6 +106,7 @@ namespace Project.Controllers
         }
 
         [HttpGet("GetShiftEvaluations")]
+        [ClaimPermission(PermissionConstants.ModifyReport)]
         public async Task<IActionResult> GetShiftEvaluations([FromQuery] string? campusId = null)
         {
             var evaluations = await _repo.GetShiftEvaluationsAsync(campusId);

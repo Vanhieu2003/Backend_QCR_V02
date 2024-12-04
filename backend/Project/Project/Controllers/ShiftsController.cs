@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using backend.Constants;
+using backend.Filters;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -26,6 +28,7 @@ namespace Project.Controllers
         }
 
         [HttpGet]
+        [ClaimPermission(PermissionConstants.ViewForm)]
         public async Task<ActionResult> GetShifts()
             
         {
@@ -50,6 +53,7 @@ namespace Project.Controllers
 
         // API lấy thông tin ca làm việc theo id, dùng query parameter
         [HttpGet("id")]
+        [ClaimPermission(PermissionConstants.ViewForm)]
         public async Task<ActionResult<Shift>> GetShiftById([FromQuery] string id)
         {
             if (_context.Shifts == null)
@@ -67,6 +71,7 @@ namespace Project.Controllers
         }
 
         [HttpGet("ByRoomId")]
+        [ClaimPermission(PermissionConstants.ViewForm)]
         public async Task<IActionResult> GetShiftsByRoomId([FromQuery] string roomId)
         {
             var shifts = await _repo.GetShiftsByRoomId(roomId);
@@ -78,6 +83,7 @@ namespace Project.Controllers
         }
 
         [HttpPut]
+        [ClaimPermission(PermissionConstants.ModifyForm)]
         public async Task<IActionResult> PutShift([FromQuery] string id, [FromBody] ShiftUpdateDto shiftDto)
         {
             var shift = await _context.Shifts.FindAsync(id);
@@ -147,6 +153,7 @@ namespace Project.Controllers
         }
 
         [HttpPost]
+        [ClaimPermission(PermissionConstants.ModifyForm)]
         public async Task<ActionResult<Shift>> PostShift([FromBody] ShiftCreateDto shiftDto)
         {
             TimeSpan startTime;
@@ -220,25 +227,7 @@ namespace Project.Controllers
             return CreatedAtAction("GetShiftById", new { id = shiftsToCreate.First().Id }, new { success = true, message = "Tạo ca làm thành công.", shifts = shiftsToCreate });
         }
 
-        // DELETE: api/Shifts
-        [HttpDelete]
-        public async Task<IActionResult> DeleteShift([FromQuery] string id)
-        {
-            if (_context.Shifts == null)
-            {
-                return NotFound();
-            }
-            var shift = await _context.Shifts.FindAsync(id);
-            if (shift == null)
-            {
-                return NotFound();
-            }
-
-            _context.Shifts.Remove(shift);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
-        }
+       
 
         private bool ShiftExists(string id)
         {

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using backend.Constants;
+using backend.Filters;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -25,6 +27,7 @@ namespace Project.Controllers
         }
         // GET: api/Rooms?id=5
         [HttpGet]
+        [ClaimPermission(PermissionConstants.AccessQcr)]
         public async Task<ActionResult<Room>> GetRoom([FromQuery] string id)
         {
             if (_context.Rooms == null)
@@ -44,6 +47,7 @@ namespace Project.Controllers
 
 
         [HttpGet("All")]
+        [ClaimPermission(PermissionConstants.AccessQcr)]
         public async Task<IActionResult> GetAllRooms([FromQuery] int pageSize = 50)
         {
             var rooms = await _context.Rooms
@@ -70,6 +74,7 @@ namespace Project.Controllers
 
 
         [HttpGet("By-Floor&Block")]
+        [ClaimPermission(PermissionConstants.AccessQcr)]
         public async Task<IActionResult> GetRoomsByFloorIdAndBlockId([FromQuery] string floorId,
      [FromQuery] string blockId)
         {
@@ -84,6 +89,7 @@ namespace Project.Controllers
         }
 
         [HttpGet("IfExistForm-Floor&Block")]
+        [ClaimPermission(PermissionConstants.AccessQcr)]
         public async Task<IActionResult> GetRoomsByFloorIdAndBlockIdIfFormExists([FromQuery] string floorId,
      [FromQuery] string blockId)
         {
@@ -98,6 +104,7 @@ namespace Project.Controllers
         }
         // search Roomname
         [HttpGet("SearchRoom")]
+        [ClaimPermission(PermissionConstants.AccessQcr)]
         public async Task<IActionResult> SearchRoom([FromQuery] string roomName)
         {
             var rooms = await _repo.SearchRoom(roomName);
@@ -106,6 +113,7 @@ namespace Project.Controllers
         }
 
         [HttpGet("GetRoomByBlocksAndCampus")]
+        [ClaimPermission(PermissionConstants.AccessQcr)]
         public async Task<IActionResult> GetRoomsByBlockAndCampus([FromQuery] string blockId, [FromQuery] string campusId)
         {
 
@@ -127,6 +135,7 @@ namespace Project.Controllers
         }
 
         [HttpGet("GetRoomByCampus")]
+        [ClaimPermission(PermissionConstants.AccessQcr)]
         public async Task<IActionResult> GetRoomsByCampusAsync([FromQuery] string campusId)
         {
 

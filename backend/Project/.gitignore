@@ -1,0 +1,11 @@
+# Bỏ qua thư mục `.vs`
+.vs/
+
+# Bỏ qua thư mục phụ thuộc Node.js
+node_modules/
+
+# Bỏ qua tệp log
+*.log
+
+# Bỏ qua tệp tạm
+*.tmp

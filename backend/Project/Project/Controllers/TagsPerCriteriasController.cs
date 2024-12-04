@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using backend.Constants;
+using backend.Filters;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -27,6 +29,7 @@ namespace Project.Controllers
 
         // GET: api/TagsPerCriterias
         [HttpGet]
+        [ClaimPermission(PermissionConstants.ViewForm)]
         public async Task<ActionResult<IEnumerable<TagsPerCriteria>>> GetTagsPerCriteria()
         {
             if (_context.TagsPerCriteria == null)
@@ -38,6 +41,7 @@ namespace Project.Controllers
 
         // GET: api/TagsPerCriterias
         [HttpGet("id")]
+        [ClaimPermission(PermissionConstants.ViewForm)]
         public async Task<ActionResult<TagsPerCriteria>> GetTagsPerCriteria([FromQuery] string id)
         {
             if (_context.TagsPerCriteria == null)
@@ -55,6 +59,7 @@ namespace Project.Controllers
         }
 
         [HttpGet("criteria")]
+        [ClaimPermission(PermissionConstants.ViewForm)]
         public async Task<IActionResult> GetTagsByCriteriaId([FromQuery] string criteriaId)
         {
             var tags = await _repo.GetTagsByCriteriaId(criteriaId);
@@ -70,6 +75,7 @@ namespace Project.Controllers
         // PUT: api/TagsPerCriterias
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut]
+        [ClaimPermission(PermissionConstants.ModifyForm)]
         public async Task<IActionResult> PutTagsPerCriteria([FromQuery] string id, [FromBody] TagsPerCriteria tagsPerCriteria)
         {
             if (id != tagsPerCriteria.Id)
@@ -101,6 +107,7 @@ namespace Project.Controllers
         // POST: api/TagsPerCriterias
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
+        [ClaimPermission(PermissionConstants.ModifyForm)]
         public async Task<ActionResult<TagsPerCriteria>> PostTagsPerCriteria([FromBody] TagsPerCriteria tagsPerCriteria)
         {
             if (_context.TagsPerCriteria == null)
@@ -134,6 +141,7 @@ namespace Project.Controllers
         }
 
         [HttpPost("newCriteria")]
+        [ClaimPermission(PermissionConstants.ModifyForm)]
         public async Task<ActionResult> AddTagsForCriteria([FromBody] CriteriaDto newCriteria)
         {
             foreach (var tag in newCriteria.Tag)
@@ -153,25 +161,7 @@ namespace Project.Controllers
             return Ok();
         }
 
-        // DELETE: api/TagsPerCriterias
-        [HttpDelete]
-        public async Task<IActionResult> DeleteTagsPerCriteria([FromQuery] string id)
-        {
-            if (_context.TagsPerCriteria == null)
-            {
-                return NotFound();
-            }
-            var tagsPerCriteria = await _context.TagsPerCriteria.FindAsync(id);
-            if (tagsPerCriteria == null)
-            {
-                return NotFound();
-            }
-
-            _context.TagsPerCriteria.Remove(tagsPerCriteria);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
-        }
+       
 
         private bool TagsPerCriteriaExists(string id)
         {

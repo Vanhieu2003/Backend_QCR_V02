@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
+using backend.Constants;
+using backend.Filters;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -28,6 +30,7 @@ namespace Project.Controllers
 
         // GET: api/Schedules
         [HttpGet]
+        [ClaimPermission(PermissionConstants.ViewSchedule)]
         public async Task<ActionResult<IEnumerable<ScheduleDetailInfoDto>>> GetSchedules()
         {
             var schedules = await _repo.GetSchedules();
@@ -35,6 +38,7 @@ namespace Project.Controllers
         }
 
         [HttpGet("userId")]
+        [ClaimPermission(PermissionConstants.ViewSchedule)]
         public async Task<ActionResult<IEnumerable<ScheduleDetailInfoDto>>> GetSchedules([FromQuery] string userId)
         {
             var schedules = await _repo.GetSchedulesByUserId(userId);
@@ -46,6 +50,7 @@ namespace Project.Controllers
 
         // GET: api/Schedules/GetRoomsList
         [HttpGet("GetRoomsList")]
+        [ClaimPermission(PermissionConstants.ViewSchedule)]
         public async Task<IActionResult> GetRoomsListByRoomType([FromQuery] string RoomType)
         {
             var rooms = await _repo.GetListRoomByRoomType(RoomType);
@@ -55,6 +60,7 @@ namespace Project.Controllers
 
         [HttpGet]
         [Route("get-users-by-shift-room-and-criteria")]
+        [ClaimPermission(PermissionConstants.ViewSchedule)]
         public async Task<IActionResult> GetUsersByShiftRoomAndCriteria(
 
      [FromQuery] QRDto place,
@@ -154,7 +160,8 @@ namespace Project.Controllers
 
 
             [HttpPut]
-            public async Task<IActionResult> UpdateSchedule([FromQuery] string id, [FromBody] ScheduleUpdateDto scheduleUpdateDto)
+        [ClaimPermission(PermissionConstants.ModifySchedule)]
+        public async Task<IActionResult> UpdateSchedule([FromQuery] string id, [FromBody] ScheduleUpdateDto scheduleUpdateDto)
         {
             try
             {
@@ -230,6 +237,7 @@ namespace Project.Controllers
 
 
         [HttpPost]
+        [ClaimPermission(PermissionConstants.ModifySchedule)]
         public async Task<IActionResult> CreateSchedule([FromBody] ScheduleCreateDto scheduleCreateDto)
         {
             try
@@ -308,6 +316,7 @@ namespace Project.Controllers
 
 
         [HttpDelete]
+        [ClaimPermission(PermissionConstants.ModifySchedule)]
         public async Task<IActionResult> DeleteSchedule([FromQuery] string scheduleId)
         {
             try

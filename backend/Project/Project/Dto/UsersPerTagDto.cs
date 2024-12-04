@@ -9,4 +9,10 @@
         public List<string> Id { get; set; }
         public string Type { get; set; }
     }
+
+    public class UpdateUserRequest
+    {
+        public string Id { get; set; } 
+        public List<string> Users { get; set; } 
+    }
 }
