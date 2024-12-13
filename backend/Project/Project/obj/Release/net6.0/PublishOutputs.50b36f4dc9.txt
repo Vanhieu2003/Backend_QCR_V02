@@ -1,6 +1,7 @@
 D:\FM-Backend-V02\backend\Project\Project\obj\Release\net6.0\PubTmp\Out\Project.exe
 D:\FM-Backend-V02\backend\Project\Project\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
 D:\FM-Backend-V02\backend\Project\Project\obj\Release\net6.0\PubTmp\Out\appsettings.json
+D:\FM-Backend-V02\backend\Project\Project\obj\Release\net6.0\PubTmp\Out\appsettings.Production.json
 D:\FM-Backend-V02\backend\Project\Project\obj\Release\net6.0\PubTmp\Out\configurationkeys.json
 D:\FM-Backend-V02\backend\Project\Project\obj\Release\net6.0\PubTmp\Out\Project.dll
 D:\FM-Backend-V02\backend\Project\Project\obj\Release\net6.0\PubTmp\Out\Project.runtimeconfig.json

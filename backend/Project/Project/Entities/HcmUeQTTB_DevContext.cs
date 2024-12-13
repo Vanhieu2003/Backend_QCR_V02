@@ -16,6 +16,7 @@ namespace Project.Entities
             : base(options)
         {
         }
+        public DbSet<Application> Application { get; set; }
 
         public virtual DbSet<Block> Blocks { get; set; } = null!;
         public virtual DbSet<Campus> Campuses { get; set; } = null!;
@@ -187,6 +188,11 @@ namespace Project.Entities
                 entity.Property(e => e.UseDepartmentName).HasMaxLength(100);
 
                 entity.Property(e => e.ValueSettlement).HasColumnType("money");
+            });
+
+            modelBuilder.Entity<Application>(entity =>
+            {
+                entity.Property(e => e.Id).ValueGeneratedOnAdd();
             });
 
             modelBuilder.Entity<Campus>(entity =>

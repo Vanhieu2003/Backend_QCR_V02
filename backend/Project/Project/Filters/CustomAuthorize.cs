@@ -22,7 +22,7 @@ namespace backend.Filters
 
             if (!roleClaim.Value.Contains(RoleDefault.Administrator))
             {
-                var service = context.HttpContext.RequestServices.GetService(typeof(IUserService)) as IUserService;// CH? check user verify v?i token g?i xu?ng hay ko 
+                var service = context.HttpContext.RequestServices.GetService(typeof(IUserService)) as IUserService;
 
                 var _bearer_token = context.HttpContext.Request.Headers["Authorization"].ToString();
                 if (!await service.VerifyAsync(_bearer_token, _permissions))

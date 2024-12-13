@@ -1,5 +1,15 @@
 [
   {
+    "ContainingType": "Project.Controllers.ApplicationController",
+    "Method": "GetApplications",
+    "RelativePath": "api/Application",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Project.Controllers.BlocksController",
     "Method": "GetBlocks",
     "RelativePath": "api/Blocks",
@@ -855,15 +865,15 @@
   },
   {
     "ContainingType": "Project.Controllers.FilesController",
-    "Method": "UploadFile",
-    "RelativePath": "api/Files/UploadFile",
-    "HttpMethod": "POST",
+    "Method": "GetImage",
+    "RelativePath": "api/Files/GetImage",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "file",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "Name": "fileUrl",
+        "Type": "System.String",
         "IsRequired": false
       }
     ],
@@ -871,7 +881,7 @@
   },
   {
     "ContainingType": "Project.Controllers.FilesController",
-    "Method": "UploadFiles",
+    "Method": "UploadFile",
     "RelativePath": "api/Files/UploadFiles",
     "HttpMethod": "POST",
     "IsController": true,

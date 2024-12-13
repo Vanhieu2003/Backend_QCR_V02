@@ -59,9 +59,9 @@ builder.Services.AddCors(options =>
         {
             builder.WithOrigins(
                 "http://localhost:3000", "http://127.0.0.1:3000", "http://localhost:7112",
-                "https://dsm-hcmue.fm.edu.vn", "https://dsm-hcmue.fm.edu.vn:7097",
                 "https://hcmue.fm.edu.vn", "http://hcmue.fm.edu.vn",
-                "https://internal-api.fm.edu.vn", "http://internal-api.fm.edu.vn", "http://localhost:3001", "http://localhost:3002")
+                "https://internal-api.fm.edu.vn", "http://internal-api.fm.edu.vn", "http://localhost:3002",
+                "https://qcr-hcmue.fm.edu.vn", "https://hcmue.fm.edu.vn/internal/qcr")
             .SetIsOriginAllowedToAllowWildcardSubdomains()
             .AllowAnyHeader()
             .AllowAnyMethod()
@@ -112,6 +112,8 @@ builder.Services.AddScoped<IResponsibleGroupRepository, ResponsibleGroupReposito
 builder.Services.AddScoped<IQRScannerRepository,QRScannerRepository>();
 builder.Services.AddScoped<IChartRepository, ChartRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IApplicationRepository, ApplicationRepository>();
+
 
 
 

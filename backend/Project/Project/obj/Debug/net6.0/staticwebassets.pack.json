@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "D:\\FM-Backend-V02\\backend\\Project\\Project\\wwwroot\\uploads\\47053da6-2448-4b0a-92fc-288a3847a443.jpg",
+      "PackagePath": "staticwebassets\\uploads\\47053da6-2448-4b0a-92fc-288a3847a443.jpg"
+    },
+    {
       "Id": "D:\\FM-Backend-V02\\backend\\Project\\Project\\wwwroot\\uploads\\638621889874728231.png",
       "PackagePath": "staticwebassets\\uploads\\638621889874728231.png"
     },
@@ -19,6 +23,46 @@
     {
       "Id": "D:\\FM-Backend-V02\\backend\\Project\\Project\\wwwroot\\uploads\\638663982759752106.jpg",
       "PackagePath": "staticwebassets\\uploads\\638663982759752106.jpg"
+    },
+    {
+      "Id": "D:\\FM-Backend-V02\\backend\\Project\\Project\\wwwroot\\uploads\\638693688706400237.jpg",
+      "PackagePath": "staticwebassets\\uploads\\638693688706400237.jpg"
+    },
+    {
+      "Id": "D:\\FM-Backend-V02\\backend\\Project\\Project\\wwwroot\\uploads\\638693698926812852.png",
+      "PackagePath": "staticwebassets\\uploads\\638693698926812852.png"
+    },
+    {
+      "Id": "D:\\FM-Backend-V02\\backend\\Project\\Project\\wwwroot\\uploads\\638693701247945402.jpg",
+      "PackagePath": "staticwebassets\\uploads\\638693701247945402.jpg"
+    },
+    {
+      "Id": "D:\\FM-Backend-V02\\backend\\Project\\Project\\wwwroot\\uploads\\77d3e0d5-0d7d-4997-8a6f-b142ceb969dc.jpg",
+      "PackagePath": "staticwebassets\\uploads\\77d3e0d5-0d7d-4997-8a6f-b142ceb969dc.jpg"
+    },
+    {
+      "Id": "D:\\FM-Backend-V02\\backend\\Project\\Project\\wwwroot\\uploads\\8e1db406-a822-4866-be0a-4350c24e9781.jpg",
+      "PackagePath": "staticwebassets\\uploads\\8e1db406-a822-4866-be0a-4350c24e9781.jpg"
+    },
+    {
+      "Id": "D:\\FM-Backend-V02\\backend\\Project\\Project\\wwwroot\\uploads\\8e74c841-5100-4cc3-9e89-a1c024c3f337.jpg",
+      "PackagePath": "staticwebassets\\uploads\\8e74c841-5100-4cc3-9e89-a1c024c3f337.jpg"
+    },
+    {
+      "Id": "D:\\FM-Backend-V02\\backend\\Project\\Project\\wwwroot\\uploads\\c8bfad9d-d94b-4c1c-8e37-96b24bae2e36.jpg",
+      "PackagePath": "staticwebassets\\uploads\\c8bfad9d-d94b-4c1c-8e37-96b24bae2e36.jpg"
+    },
+    {
+      "Id": "D:\\FM-Backend-V02\\backend\\Project\\Project\\wwwroot\\uploads\\dce8ce9b-cc98-4c6d-8d02-7b2e3dcbc415.jpg",
+      "PackagePath": "staticwebassets\\uploads\\dce8ce9b-cc98-4c6d-8d02-7b2e3dcbc415.jpg"
+    },
+    {
+      "Id": "D:\\FM-Backend-V02\\backend\\Project\\Project\\wwwroot\\uploads\\e061a670-9b71-476c-9f53-04a3e2e9154c.jpg",
+      "PackagePath": "staticwebassets\\uploads\\e061a670-9b71-476c-9f53-04a3e2e9154c.jpg"
+    },
+    {
+      "Id": "D:\\FM-Backend-V02\\backend\\Project\\Project\\wwwroot\\uploads\\f7c69d8d-ca22-4ff7-87c1-ab5efa9a2e48.jpg",
+      "PackagePath": "staticwebassets\\uploads\\f7c69d8d-ca22-4ff7-87c1-ab5efa9a2e48.jpg"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Project.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
