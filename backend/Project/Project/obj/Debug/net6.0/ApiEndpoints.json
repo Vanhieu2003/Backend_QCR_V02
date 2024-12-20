@@ -1011,6 +1011,22 @@
     ]
   },
   {
+    "ContainingType": "Project.Controllers.QRController",
+    "Method": "getInfoByQR",
+    "RelativePath": "api/QR/GetInfo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roomCode",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Project.Controllers.ResponsibleGroupsController",
     "Method": "GetResponsibleGroups",
     "RelativePath": "api/ResponsibleGroups",
@@ -1828,22 +1844,6 @@
         "Name": "request",
         "Type": "Project.Dto.UpdateUserRequest",
         "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Project.Controllers.QRController",
-    "Method": "getInfoByQR",
-    "RelativePath": "GetInfo",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "roomCode",
-        "Type": "System.String",
-        "IsRequired": false
       }
     ],
     "ReturnTypes": []

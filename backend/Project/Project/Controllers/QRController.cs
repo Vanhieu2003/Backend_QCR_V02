@@ -8,6 +8,9 @@ using Project.Repository;
 
 namespace Project.Controllers
 {
+
+    [Route("api/[controller]")]
+    [ApiController]
     public class QRController : Controller
     {
         private readonly HcmUeQTTB_DevContext _context;

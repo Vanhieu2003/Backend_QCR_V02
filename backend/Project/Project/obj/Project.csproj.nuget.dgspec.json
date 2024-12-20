@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FM-Backend-V02\\backend\\Project\\Project\\Project.csproj": {}
+    "D:\\Project\\FM-Backend-V02\\backend\\Project\\Project\\Project.csproj": {}
   },
   "projects": {
-    "D:\\FM-Backend-V02\\backend\\Project\\Constants\\Constants.csproj": {
+    "D:\\Project\\FM-Backend-V02\\backend\\Project\\Constants\\Constants.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FM-Backend-V02\\backend\\Project\\Constants\\Constants.csproj",
+        "projectUniqueName": "D:\\Project\\FM-Backend-V02\\backend\\Project\\Constants\\Constants.csproj",
         "projectName": "Constants",
-        "projectPath": "D:\\FM-Backend-V02\\backend\\Project\\Constants\\Constants.csproj",
+        "projectPath": "D:\\Project\\FM-Backend-V02\\backend\\Project\\Constants\\Constants.csproj",
         "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
-        "outputPath": "D:\\FM-Backend-V02\\backend\\Project\\Constants\\obj\\",
+        "outputPath": "D:\\Project\\FM-Backend-V02\\backend\\Project\\Constants\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -83,14 +83,14 @@
         }
       }
     },
-    "D:\\FM-Backend-V02\\backend\\Project\\Project\\Project.csproj": {
+    "D:\\Project\\FM-Backend-V02\\backend\\Project\\Project\\Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Project.csproj",
+        "projectUniqueName": "D:\\Project\\FM-Backend-V02\\backend\\Project\\Project\\Project.csproj",
         "projectName": "Project",
-        "projectPath": "D:\\FM-Backend-V02\\backend\\Project\\Project\\Project.csproj",
+        "projectPath": "D:\\Project\\FM-Backend-V02\\backend\\Project\\Project\\Project.csproj",
         "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
-        "outputPath": "D:\\FM-Backend-V02\\backend\\Project\\Project\\obj\\",
+        "outputPath": "D:\\Project\\FM-Backend-V02\\backend\\Project\\Project\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -111,8 +111,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\FM-Backend-V02\\backend\\Project\\Constants\\Constants.csproj": {
-                "projectPath": "D:\\FM-Backend-V02\\backend\\Project\\Constants\\Constants.csproj"
+              "D:\\Project\\FM-Backend-V02\\backend\\Project\\Constants\\Constants.csproj": {
+                "projectPath": "D:\\Project\\FM-Backend-V02\\backend\\Project\\Constants\\Constants.csproj"
               }
             }
           }

@@ -24,7 +24,8 @@ namespace Project.Repository
                                 {
                                     AppName = a.AppName,
                                     Logo = a.Logo,
-                                    Permission = pe.Name
+                                    Permission = pe.Name,
+                                    Path = a.Path
                                 }).ToListAsync();
             return result;
         }

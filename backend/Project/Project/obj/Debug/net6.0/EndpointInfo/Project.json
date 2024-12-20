@@ -1563,7 +1563,7 @@
         }
       }
     },
-    "/GetInfo": {
+    "/api/QR/GetInfo": {
       "get": {
         "tags": [
           "QR"
